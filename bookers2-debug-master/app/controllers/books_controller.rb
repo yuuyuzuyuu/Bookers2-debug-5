@@ -4,6 +4,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @user = @book.user
     @book_new = Book.new
+    @post_comment =PostComment.new
   end
 
   def index
@@ -53,7 +54,7 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :body)
   end
-  
+
     def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
     end
