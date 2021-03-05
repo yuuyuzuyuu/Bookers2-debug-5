@@ -35,10 +35,6 @@ class UsersController < ApplicationController
     @users = @user.follower_user
     render 'show_followers'
   end
-  
-  def search
-    
-  end
 
   private
   def user_params

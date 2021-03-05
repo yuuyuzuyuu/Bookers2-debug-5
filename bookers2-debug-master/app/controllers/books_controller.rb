@@ -32,8 +32,6 @@ class BooksController < ApplicationController
     end
   end
 
-
-
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
@@ -55,8 +53,8 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :body)
   end
 
-    def user_params
+  def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
-    end
+  end
 
 end
