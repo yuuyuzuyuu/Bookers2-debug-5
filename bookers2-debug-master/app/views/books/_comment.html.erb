@@ -1,0 +1,9 @@
+<div id="comments_area"><%= render 'comment_index', book: book %></div>
+
+<div class="new-comment">
+  <%= form_with(model:[book, post_comment]) do |f| %>
+    <%= f.text_area :comment, size:"80x5" %><br>
+  <%= f.submit "送信" %>
+  <% end %>
+</div>
+      
